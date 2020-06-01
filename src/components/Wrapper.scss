@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "samsungOne500";
+  src: url(../styles/fonts/SamsungOneKorean-500.otf) format("opentype");
+}
+@font-face {
+  font-family: "samsungOne700";
+  src: url(../styles/fonts/SamsungOneKorean-700.otf) format("opentype");
+}
+
+* {
+  font-size: 17px;
+  width: 100%;
+  font-family: samsungOne500;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

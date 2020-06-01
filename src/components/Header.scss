@@ -1,0 +1,40 @@
+.header-wrapper {
+  border-bottom: black 1px solid;
+  height: 80px;
+  padding: 0 10%;
+  .inner {
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .logo {
+      font-family: samsungOne700;
+      margin-right: 8%;
+      font-size: 1.25rem;
+    }
+    a {
+      text-align: center;
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
+.first {
+  width: 45%;
+  float: left;
+}
+.second {
+  width: 25%;
+  float: right;
+}
+.third {
+  width: 10%;
+  float: right;
+  a {
+    img {
+      width: 50%;
+      height: 50%;
+    }
+  }
+}
