@@ -4,17 +4,56 @@ import "./Header.scss";
 const Header = () => {
   return (
     <header className="header-wrapper">
-      <div className="inner first">
-        <img src="styles/images/samsung.png" alt="logo" />
-        <a href="/">갤럭시 5G</a>
-        <a href="/">가전</a>
-        <a href="/">모바일</a>
-        <a href="/">TV</a>
-        <a href="/">IT</a>
-        <a href="/">오디오</a>
-        <a href="/">소모품</a>
+      <div className="inner logo">
+        <a href="/">
+          <img src="/images/samsung.png" alt="logo" />
+        </a>
       </div>
-      <div className="inner third">
+      <div className="inner product">
+        <a href="/" className="galaxy">
+          갤럭시 5G
+        </a>
+        <a href="/" className="electro">
+          가전
+        </a>
+        <a href="/" className="mobile">
+          모바일
+        </a>
+        <a href="/" className="tv">
+          TV
+        </a>
+        <a href="/" className="it">
+          IT
+        </a>
+        <a href="/" className="audio">
+          오디오
+        </a>
+        <a href="/" className="consume">
+          소모품
+        </a>
+        <a href="/" className="event">
+          이벤트
+        </a>
+        <a href="/" className="dot">
+          닷컴핫딜
+        </a>
+      </div>
+
+      <div className="inner service">
+        <a href="/" className="story">
+          스토리
+        </a>
+        <a href="/" className="member">
+          멤버십
+        </a>
+        <a href="/" className="after">
+          고객지원
+        </a>
+        <a href="/" className="business">
+          비즈니스
+        </a>
+      </div>
+      <div className="inner info">
         <a href="/">
           <img
             src="https://img.icons8.com/material-outlined/24/000000/user--v1.png"
@@ -33,12 +72,6 @@ const Header = () => {
             alt="search"
           />
         </a>
-      </div>
-      <div className="inner second">
-        <a href="/">스토리</a>
-        <a href="/">멤버십</a>
-        <a href="/">고객지원</a>
-        <a href="/">비즈니스</a>
       </div>
     </header>
   );
