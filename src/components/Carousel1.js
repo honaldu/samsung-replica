@@ -1,49 +1,36 @@
 import React from "react";
 import "./Carousel1.scss";
+import img1 from "../images/note10.jpg";
 
 const Carousel1 = () => {
-  let slideIndex = 1;
-  showSlides(slideIndex);
-
-  let plusSlides = (n) => {
-    showSlides((slideIndex += n));
-  };
-
-  let currentSlide = (n) => {
-    showSlides((slideIndex = n));
-  };
   return (
     <div className="carousel-wrapper">
-      <div class="slideshow-container">
-        <div class="mySlides fade">
-          <div class="numbertext">1 / 3</div>
-          <img src="/images/note9" alt="note9" />
-          <div class="text">Caption Text</div>
+      <img src={img1} alt="note10" />
+      <div className="carousel-introduce">
+        <div className="carousel-text">
+          <div className="text-title">Galaxy Note 10</div>
+          <div className="text-describe">더욱 새로워진 노트</div>
+          <div className="carousel-button">
+            <a href="/" className="more">
+              더 알아보기
+            </a>
+            <a href="/" className="benefit">
+              구매 혜택 보기
+            </a>
+          </div>
         </div>
-
-        <div class="mySlides fade">
-          <div class="numbertext">2 / 3</div>
-          <img src="/images/note10.jpg" alt="note10" />
-          <div class="text">Caption Two</div>
-        </div>
-
-        <div class="mySlides fade">
-          <div class="numbertext">3 / 3</div>
-          <img src="/images/fold.jpg" alt="fold" />
-          <div class="text">Caption Three</div>
-        </div>
-        <a class="prev" href="/">
-          &#10094;
-        </a>
-        <a class="next" href="/">
-          &#10095;
-        </a>
       </div>
-      <div className="dot-zone">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
+      <div className="carousel-menu">
+        <a href="/">Galaxy Note 9</a>
+        <a href="/">Galaxy Note 10</a>
+        <a href="/">Galaxy fold</a>
       </div>
+      <a href="/" className="prev">
+        &#10094;
+      </a>
+      <a href="/" className="next">
+        &#10095;
+      </a>
     </div>
   );
 };

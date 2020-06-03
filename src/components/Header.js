@@ -1,12 +1,13 @@
 import React from "react";
 import "./Header.scss";
+import logo from "../images/samsung.png";
 
 const Header = () => {
   return (
     <header className="header-wrapper">
       <div className="inner logo">
         <a href="/">
-          <img src="/images/samsung.png" alt="logo" />
+          <img src={logo} alt="logo" />
         </a>
       </div>
       <div className="inner product">

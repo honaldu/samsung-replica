@@ -1,74 +1,71 @@
 .carousel-wrapper {
-  .slideshow-container {
-    height: 760px;
-    position: relative;
-    margin: auto;
-    .fade {
-      animation-name: fade;
-      animation-duration: 1.5s;
+  height: 760px;
+  border-bottom: black 1px solid;
+  img {
+    height: 100%;
+  }
+  .carousel-introduce {
+    position: absolute;
+    margin-left: 13%;
+    width: auto;
+    top: 40%;
+    color: white;
+    .text-title {
+      font-size: 5rem;
     }
-    @keyframes fade {
-      from {
-        opacity: 0.4;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-    .mySlides {
-      display: none;
-      .text {
-        color: #f2f2f2;
-        font-size: 15px;
-        padding: 8px 12px;
-      }
-      .numbertext {
-        color: #f2f2f2;
-        font-size: 12px;
-        padding: 8px 12px;
-        position: absolute;
-        top: 0;
-      }
-    }
-    .prev,
-    .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      margin-top: -22px;
-      padding: 16px;
-      color: royalblue;
-      font-weight: bold;
+    .text-describe {
       font-size: 2rem;
-      transition: 0.6s ease;
-      border-radius: 0 3px 3px 0;
-      user-select: none;
     }
-    .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
-    }
-    .prev:hover,
-    .next:hover {
-      background-color: rbga(0, 0, 0, 0.8);
+    .carousel-button {
+      color: white;
+      margin-top: 5%;
+      a {
+        font-size: 1rem;
+        text-decoration: none;
+        color: black;
+      }
+      .more {
+        color: white;
+        margin-right: 4%;
+        border-bottom: white 2px solid;
+        padding-bottom: 0.2%;
+      }
+      .benefit {
+        padding: 2% 3%;
+        background-color: white;
+        border-radius: 45px;
+      }
     }
   }
-  .dot-zone {
+  .carousel-menu {
     text-align: center;
-    .dot {
-      cursor: pointer;
-      height: 15px;
-      width: 15px;
-      margin: 0 2px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.6s ease;
+    position: absolute;
+    bottom: 15%;
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.3rem;
+      margin: 0 5%;
+      padding-bottom: 0.7%;
+      border-bottom: white 1px solid;
     }
-    .active,
-    .dot:hover {
-      background-color: #717171;
-    }
+  }
+  .prev,
+  .next {
+    position: absolute;
+    top: 45%;
+    color: white;
+    font-weight: 900;
+    font-size: 5rem;
+    text-decoration: none;
+    margin: 0 3%;
+
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+  }
+  .next {
+    right: 0;
   }
 }
