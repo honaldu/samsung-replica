@@ -8,7 +8,9 @@ const Recom1 = () => {
       <div className="recom1-title">모바일</div>
       <div className="recom1-menu">
         <a href="/">Galaxy buds</a>
-        <a href="/">Galaxy Tab 6</a>
+        <a href="/" className="tab">
+          Galaxy Tab 6
+        </a>
         <a href="/">Galaxy Z Flip</a>
         <a href="/">Galaxy Watch</a>
       </div>

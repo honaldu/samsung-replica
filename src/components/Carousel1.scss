@@ -1,6 +1,8 @@
 .carousel-wrapper {
   height: 760px;
   border-bottom: black 1px solid;
+  position: relative;
+  margin: auto;
   img {
     height: 100%;
   }
@@ -10,30 +12,33 @@
     width: auto;
     top: 40%;
     color: white;
-    .text-title {
-      font-size: 5rem;
-    }
-    .text-describe {
-      font-size: 2rem;
-    }
-    .carousel-button {
-      color: white;
-      margin-top: 5%;
-      a {
-        font-size: 1rem;
-        text-decoration: none;
-        color: black;
+    .carousel-text {
+      position: relative;
+      .text-title {
+        font-size: 5rem;
       }
-      .more {
+      .text-describe {
+        font-size: 2rem;
+      }
+      .carousel-button {
         color: white;
-        margin-right: 4%;
-        border-bottom: white 2px solid;
-        padding-bottom: 0.2%;
-      }
-      .benefit {
-        padding: 2% 3%;
-        background-color: white;
-        border-radius: 45px;
+        margin-top: 5%;
+        a {
+          font-size: 1rem;
+          text-decoration: none;
+          color: black;
+        }
+        .more {
+          color: white;
+          margin-right: 4%;
+          border-bottom: white 2px solid;
+          padding-bottom: 0.2%;
+        }
+        .benefit {
+          padding: 2% 3%;
+          background-color: white;
+          border-radius: 45px;
+        }
       }
     }
   }
@@ -54,8 +59,7 @@
   .prev,
   .next {
     position: absolute;
-    top: 0;
-    margin-top: 37.5%;
+    top: 50%;
     background: transparent;
     color: white;
     font-weight: 900;

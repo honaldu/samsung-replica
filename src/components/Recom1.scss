@@ -7,6 +7,10 @@
     font-size: 2.5rem;
     margin-bottom: 20px;
   }
+  .tab {
+    border-bottom: black 2px solid;
+    padding-bottom: 5px;
+  }
   .recom1-menu {
     text-align: center;
     a {
@@ -27,13 +31,17 @@
     font-family: samsungOne700;
   }
   .recom1-buy {
-    margin: 0 auto;
-    padding: 10px 20px;
+    text-align: center;
+    margin: 20px auto;
+
+    width: 200px;
+    padding: 10px 5px;
     background-color: black;
     border-radius: 45px;
     color: white;
     font-size: 1.25rem;
     text-decoration: none;
+    display: block;
   }
 }
 .row {

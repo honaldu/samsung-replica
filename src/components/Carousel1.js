@@ -23,7 +23,7 @@ const Carousel1 = () => {
       <div className="carousel-menu">
         <a href="/">Galaxy Note 9</a>
         <a href="/">Galaxy Note 10</a>
-        <a href="/">Galaxy fold</a>
+        <a href="/">Galaxy Fold</a>
       </div>
       <a href="/" className="prev">
         &#10094;

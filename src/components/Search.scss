@@ -1,0 +1,22 @@
+.search-wrapper {
+  height: 300px;
+
+  .search-container {
+    margin: 30px auto;
+    width: 70%;
+    border-bottom: black 2px solid;
+
+    .search-input {
+      border: none;
+      padding: 10px 50px;
+      font-size: 2rem;
+      width: 90%;
+    }
+    .search-button {
+      width: 60px;
+      font-size: 2rem;
+      background-color: white;
+      border: none;
+    }
+  }
+}
