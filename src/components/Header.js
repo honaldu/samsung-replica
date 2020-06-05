@@ -12,34 +12,35 @@ const Header = () => {
           </a>
         </div>
         <div className="header-product">
-          <a href="/">
-            <span>갤럭시 5G</span>
+          <a href="/" className="galaxy">
+            갤럭시 5G
           </a>
-          <a href="/">
-            <span>모바일</span>
+          <a href="/" className="electro">
+            가전
           </a>
-          <a href="/">
-            <span>모바일</span>
+          <a href="/" className="mobile">
+            모바일
           </a>
-          <a href="/">
-            <span>가전</span>
+          <a href="/" className="tv">
+            TV
           </a>
-          <a href="/">
-            <span>이벤트</span>
+          <a href="/" className="it">
+            IT
           </a>
-          <a href="/">
-            <span>소모품</span>
+          <a href="/" className="audio">
+            오디오
           </a>
-          <a href="/">
-            <span>오디오</span>
+          <a href="/" className="consume">
+            소모품
           </a>
-          <a href="/">
-            <span>it</span>
+          <a href="/" className="event">
+            이벤트
           </a>
-          <a href="/">
-            <span>닷컴핫딜</span>
+          <a href="/" className="dot">
+            닷컴핫딜
           </a>
         </div>
+        <div className="box"></div>
         <div className="header-service">
           <a href="/">스토리</a>
           <a href="/">멤버십</a>

@@ -1,7 +1,5 @@
 import React from "react";
 import "./Search.scss";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Search = () => {
   return (
@@ -9,7 +7,10 @@ const Search = () => {
       <div className="search-container">
         <input type="text" className="search-input" placeholder="갤럭시 폴드" />
         <button type="button" className="search-button">
-          <FontAwesomeIcon icon={faSearch} />
+          <img
+            src="https://img.icons8.com/material-outlined/48/000000/search.png"
+            alt="search"
+          />
         </button>
       </div>
     </div>
