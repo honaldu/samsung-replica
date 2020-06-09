@@ -1,17 +1,15 @@
 import React from "react";
 import "./Wrapper.scss";
 import Header from "./Header";
-import Carousel from "./Carousel";
 import Recom from "./Recom";
 import Recom1 from "./Recom1";
 import Search from "./Search";
 
-const Wrapper = () => {
+const Wrapper = ({ carousel }) => {
   return (
     <div>
       <Header />
-
-      <Carousel />
+      {carousel}
       <Recom />
       <Recom1 />
       <Search />

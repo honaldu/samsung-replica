@@ -11,13 +11,24 @@ import img3 from "../images/fold.jpg";
 
 class App extends Component {
   state = {
-    items: [img1, img2, img3],
+    images: [img1, img2, img3],
+    animationTime: 500,
+    slideInterval: 10000,
   };
+
   render() {
+    const { images, animationTime, slideInterval } = this.state;
     return (
-      <Wrapper>
+      <Wrapper
+        carousel={
+          <Carousel animationTime={animationTime} slideInterval={slideInterval}>
+            {images.map((item, index) => {
+              return <img src={item} key={index} alt="images" />;
+            })}
+          </Carousel>
+        }
+      >
         <Header />
-        <Carousel animationTime={500} sideInterval={10000} />
         <Recom />
         <Recom1 />
         <Search />
