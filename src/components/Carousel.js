@@ -80,6 +80,7 @@ class Carousel extends Component {
     const { next, prev, elements } = this;
     const { activeIndex, transitionDuration } = this.state;
     const translation = (-100 * activeIndex) / elements.length; // -100으로 퍼센테이지에 대응
+
     const style = {
       transform: "translateX(" + translation.toString() + "%)",
       transitionDuration: transitionDuration / 1000 + "s",

@@ -1,15 +1,8 @@
 import React from "react";
 import "./Carousel1.scss";
-import img1 from "../images/note9.jpg";
+import img1 from "../images/note10.jpg";
 
-const Carousel1 = ({
-  items,
-  current,
-  isNext,
-  handleNext,
-  handlePrev,
-  historyClick,
-}) => {
+const Carousel1 = () => {
   return (
     <div className="carousel-wrapper">
       <div className="carousel">
