@@ -11,9 +11,9 @@ import img3 from "../images/fold.jpg";
 
 class App extends Component {
   state = {
-    images: [img1, img2, img3],
-    animationTime: 500,
-    slideInterval: 10000,
+    images: [img1, img2, img3], // 이미지 목록
+    animationTime: 300, // 애니메이션 시간
+    slideInterval: 3000, // 몇초 뒤 넘길 지
   };
 
   render() {
