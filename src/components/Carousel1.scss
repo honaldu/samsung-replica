@@ -5,7 +5,6 @@
 .carousel-wrapper {
   position: relative;
   .carousel {
-    display: none;
     height: 760px;
     border-bottom: black 1px solid;
     position: relative;
@@ -54,7 +53,7 @@
   .next {
     position: absolute;
     top: 50%;
-    background: transparent;
+
     color: black;
     font-weight: 900;
     font-size: 5rem;
@@ -64,7 +63,6 @@
     width: auto;
     padding: 16px;
     transition: 0.6s ease;
-    user-select: none;
   }
   .prev {
     left: 0;
@@ -87,8 +85,4 @@
       transition: background-color 0.6s ease;
     }
   }
-}
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
 }

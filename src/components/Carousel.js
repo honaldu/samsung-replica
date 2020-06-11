@@ -6,59 +6,52 @@ class Carousel extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeIndex: 1, // 페이지 인덱스
-      transitionDuration: props.animationTime, // animationtime duration으로 state 화
+      activeIndex: 1,
+      transitionDuration: props.animationTime,
     };
-    this.elements = this.createClones(props.children); // props 로 받은 image 들 clone
-    this.timeoutObject = null; // 시간 제한 위한 Object?
+    this.elements = this.createClones(props.children);
+    this.timeoutObject = null;
   }
-  // img 복제
+
   createClones(children) {
-    const length = children.length; // img length 값
-    const last = Object.assign({}, children[length - 1]); // img last
-    const first = Object.assign({}, children[0]); // img first
+    const length = children.length;
+    const last = Object.assign({}, children[length - 1]);
+    const first = Object.assign({}, children[0]);
 
-    return [last, ...children, first]; // first, last 있는 복제 생산
+    return [last, ...children, first];
   }
 
-  // 생명 주기 함수
-  // 화면에 나오기 전 startSlideInterval 실행
   componentDidMount() {
     this.startSlideInterval();
   }
-  // timer 함수
+
   startSlideInterval() {
     if (this.props.slideInterval) {
-      this.timeoutObject = setTimeout(this.next, this.props.slideInterval); // sldieInterval 지날 시 next 함수 실행
+      this.timeoutObject = setTimeout(this.next, this.props.slideInterval);
     }
   }
 
-  // timer 초기화 함수
   clearSlideInterval() {
-    // null 값 아닐 때 실행
     if (this.timeoutObject) {
       clearTimeout(this.timeoutObject);
     }
   }
 
   handleTransitionEnd = () => {
-    const length = this.elements.length; // clone 된 img 숫자
-    const activeIndex = this.state.activeIndex; // activeIndex
-    // activeIndex = 0 될 시 마지막 페이지
+    const length = this.elements.length;
+    const activeIndex = this.state.activeIndex;
+
     if (activeIndex === 0) {
-      this.setState({ transitionDuration: 0, activeIndex: length });
-    }
-    // activeIndex = length 될 시 첫번째 페이지
-    else if (activeIndex === length - 1) {
+      this.setState({ transitionDuration: 0, activeIndex: length - 2 });
+    } else if (activeIndex === length - 1) {
       this.setState({ transitionDuration: 0, activeIndex: 1 });
     }
-    // timer 설정 및 초기화
+
     this.clearSlideInterval();
     this.startSlideInterval();
   };
 
   setActiveIndex = (newIndex) => {
-    // newIndex 가 0에서 마지막 인덱스 값일 때
     if (newIndex >= 0 && newIndex <= this.elements.length - 1) {
       this.setState({
         transitionDuration: this.props.animationTime,
@@ -78,6 +71,7 @@ class Carousel extends Component {
   render() {
     // 구조분해
     const { next, prev, elements } = this;
+    const { titles, describes } = this.props;
     const { activeIndex, transitionDuration } = this.state;
     const translation = (-100 * activeIndex) / elements.length; // -100으로 퍼센테이지에 대응
 
@@ -98,10 +92,25 @@ class Carousel extends Component {
             return (
               <div className="carousel-item" key={index}>
                 {element}
+                <div className="carousel-introduce">
+                  <div className="carousel-text">
+                    <div className="text-title">{titles[index - 1]}</div>
+                    <div className="text-describe">{describes[index - 1]}</div>
+                    <div className="carousel-button">
+                      <a href="/" className="more">
+                        더 알아보기
+                      </a>
+                      <a href="/" className="benefit">
+                        구매 혜택 보기
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             );
           })}
         </div>
+
         <div className="indicators">
           {this.props.children.map((child, index) => {
             let indicatorClass = "indicators-item";
@@ -111,16 +120,18 @@ class Carousel extends Component {
             }
 
             return (
-              <div
+              <button
                 className={indicatorClass}
                 key={index + 1}
                 onClick={() => this.setActiveIndex(index + 1)}
-              />
+              >
+                {titles[index]}
+              </button>
             );
           })}
         </div>
-        <Arrow onArrowClick={prev} direction="left" />
-        <Arrow onArrowClick={next} direction="right" />
+        <Arrow onArrowClick={prev} direction="left" text="&#10094;" />
+        <Arrow onArrowClick={next} direction="right" text="&#10095;" />
       </div>
     );
   }
@@ -132,13 +143,10 @@ Carousel.defaultProps = {
 
 //Arrow component
 const Arrow = (props) => {
-  const containerClass = "arrow " + props.direction;
-  const iconClass = "fas fa-chevron-" + props.direction;
-
   return (
-    <div onClick={props.onArrowClick} className={containerClass}>
-      <i className={iconClass} />
-    </div>
+    <button onClick={props.onArrowClick} className={props.direction}>
+      {props.text}
+    </button>
   );
 };
 

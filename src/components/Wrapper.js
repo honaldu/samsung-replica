@@ -10,6 +10,7 @@ const Wrapper = ({ carousel }) => {
     <div>
       <Header />
       {carousel}
+
       <Recom />
       <Recom1 />
       <Search />
