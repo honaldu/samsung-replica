@@ -68,6 +68,7 @@ $inactiveColor: rgba(0, 0, 0, 0.4);
     bottom: 10%;
 
     .indicators-item {
+      position: relative;
       text-decoration: none;
       width: 10%;
       background: none;
@@ -78,14 +79,19 @@ $inactiveColor: rgba(0, 0, 0, 0.4);
       cursor: pointer;
       border-bottom: rgba(255, 255, 255, 0.3) 3px solid;
 
-      &:hover,
-      &.active {
+      &::after {
         border-bottom: rgba(255, 255, 255, 1) 3px solid;
         content: "";
+        position: absolute;
         height: 100%;
         left: 0;
         top: 0;
-        transition: linear all 3s;
+        width: 0;
+        transition: linear all 2.5s;
+      }
+      &:hover::after,
+      &.active::after {
+        width: 100%;
       }
     }
   }
