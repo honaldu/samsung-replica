@@ -11,31 +11,29 @@ import img3 from "../images/fold.jpg";
 
 class App extends Component {
   state = {
-    images: [img1, img2, img3],
-    titles: ["Galaxy Note9", "Galaxy Note10", "Galaxy Fold"],
-    describes: ["자급제 Open", "더욱 새로워진 Note", "Fold 그 이상의 가치"],
-    animationTime: 250,
-    slideInterval: 10000,
+    Carousel1: {
+      images: [img1, img2, img3],
+      titles: ["Galaxy Note9", "Galaxy Note10", "Galaxy Fold"],
+      describes: ["자급제 Open", "더욱 새로워진 Note", "Fold 그 이상의 가치"],
+      animationTime: 250,
+      slideInterval: 3000,
+    },
+    Carousel2: {},
   };
 
   render() {
-    const {
-      images,
-      animationTime,
-      slideInterval,
-      titles,
-      describes,
-    } = this.state;
+    const { Carousel1 } = this.state;
+
     return (
       <Wrapper
         carousel={
           <Carousel
-            animationTime={animationTime}
-            slideInterval={slideInterval}
-            titles={titles}
-            describes={describes}
+            animationTime={Carousel1.animationTime}
+            slideInterval={Carousel1.slideInterval}
+            titles={Carousel1.titles}
+            describes={Carousel1.describes}
           >
-            {images.map((item, index) => {
+            {Carousel1.images.map((item, index) => {
               return <img src={item} key={index} alt="images" />;
             })}
           </Carousel>

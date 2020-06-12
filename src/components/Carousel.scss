@@ -76,12 +76,16 @@ $inactiveColor: rgba(0, 0, 0, 0.4);
       margin: 0 3%;
       padding-bottom: 0.7%;
       cursor: pointer;
-      transition: border-bottom 3s linear;
       border-bottom: rgba(255, 255, 255, 0.3) 3px solid;
 
       &:hover,
       &.active {
-        border-bottom: white 3px solid;
+        border-bottom: rgba(255, 255, 255, 1) 3px solid;
+        content: "";
+        height: 100%;
+        left: 0;
+        top: 0;
+        transition: linear all 3s;
       }
     }
   }
