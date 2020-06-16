@@ -24,7 +24,7 @@ class App extends Component {
     },
     Recom1: {
       images: [RecImg1, RecImg2, RecImg3, RecImg4],
-      images2: [RecImg1, RecImg2, RecImg3, RecImg4],
+      images2: [RecImg4,RecImg3,RecImg2,RecImg1],
       describes: ["Galaxy S2", "Galaxy S4", "Galaxy S7", "Galaxy Note 9"],
     },
   };
