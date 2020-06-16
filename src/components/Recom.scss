@@ -29,7 +29,6 @@
     .recom-item {
       width: 300px;
       height: 240px;
-
       border-radius: 12px;
       background-color: whitesmoke;
       text-align: center;
@@ -57,9 +56,24 @@
   justify-content: center;
   align-items: center;
 }
-.col {
+.column {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media all and (max-width: 1440px) {
+  .recom-wrapper {
+    .recom-items {
+      grid-template-columns: auto auto auto;
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .recom-wrapper {
+    .recom-items {
+      grid-template-columns: auto auto;
+    }
+  }
 }

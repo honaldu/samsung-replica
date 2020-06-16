@@ -27,7 +27,7 @@ class Recom extends Component {
                       e.currentTarget.src = element;
                     }}
                   />
-                  <a href="/">{describes[0]}</a>
+                  <a href="/">{describes[index]}</a>
                 </div>
               );
             })}

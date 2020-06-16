@@ -12,6 +12,10 @@ import RecImg1 from "../images/galaxyS2.jpg";
 import RecImg2 from "../images/galaxyS4.jpeg";
 import RecImg3 from "../images/galaxyS7.jpg";
 import RecImg4 from "../images/note9.jpeg";
+import RecImg5 from "../images/galaxyS2Back.jpg";
+import RecImg6 from "../images/galaxyS4Back.jpg";
+import RecImg7 from "../images/galaxyS7Back.jpg";
+import RecImg8 from "../images/Note9Back.jpg";
 
 class App extends Component {
   state = {
@@ -24,7 +28,7 @@ class App extends Component {
     },
     Recom1: {
       images: [RecImg1, RecImg2, RecImg3, RecImg4],
-      images2: [RecImg4,RecImg3,RecImg2,RecImg1],
+      images2: [RecImg5, RecImg6, RecImg7, RecImg8],
       describes: ["Galaxy S2", "Galaxy S4", "Galaxy S7", "Galaxy Note 9"],
     },
   };
