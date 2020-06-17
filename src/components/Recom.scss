@@ -77,3 +77,10 @@
     }
   }
 }
+@media all and (max-width: 460px) {
+  .recom-wrapper {
+    .recom-items {
+      grid-template-columns: auto;
+    }
+  }
+}

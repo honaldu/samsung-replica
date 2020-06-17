@@ -5,6 +5,7 @@ import Carousel from "./Carousel";
 import Recom from "./Recom";
 import Recom2 from "./Recom1";
 import Search from "./Search";
+
 import CarImg1 from "../images/note9.jpg";
 import CarImg2 from "../images/note10.jpg";
 import CarImg3 from "../images/fold.jpg";
