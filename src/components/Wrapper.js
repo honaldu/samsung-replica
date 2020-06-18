@@ -1,13 +1,13 @@
 import React from "react";
 import "./Wrapper.scss";
-import Header from "./Header";
+
 import Recom1 from "./Recom1";
 import Search from "./Search";
 
-const Wrapper = ({ carousel, recom }) => {
+const Wrapper = ({ carousel, recom, header }) => {
   return (
     <div>
-      <Header />
+      {header}
       {carousel}
       {recom}
       <Recom1 />

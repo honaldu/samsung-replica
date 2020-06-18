@@ -1,9 +1,13 @@
 import React, { Component } from "react";
-import NavBar from "./NavBar";
+import NavBar from "./NavBarClone";
 
 class App2 extends Component {
   render() {
-    return <NavBar />;
+    return (
+      <div>
+        <NavBar />
+      </div>
+    );
   }
 }
 

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import "./NavBar.scss";
+import logo from "../images/samsung.png";
+import "./NavBarClone.scss";
 
 class NavBar extends Component {
   state = {
@@ -17,12 +18,11 @@ class NavBar extends Component {
       <div>
         <header className="header">
           <div className="navContainer">
-            <span
-              className="logo"
-              style={{ color: "#fff", fontStyle: "italic", fontWeight: "400" }}
-            >
-              React Navigaton
-            </span>
+            <div className="header-logo">
+              <a href="/">
+                <img src={logo} alt="logo" />
+              </a>
+            </div>
             <nav>
               <ul
                 className={`mainNav ${sideBar ? "open" : ""}`}
@@ -42,7 +42,6 @@ class NavBar extends Component {
                   <a className="mainNavLink" href="/">
                     Dummy 3
                   </a>
-                  =
                 </li>
               </ul>
             </nav>
@@ -52,9 +51,10 @@ class NavBar extends Component {
               }}
               className={`navToggle ${sideBar ? "open" : null}`}
             >
-              <span />
-              <span />
-              <span />
+              <img
+                src="https://img.icons8.com/material-outlined/24/000000/menu.png"
+                alt="nav"
+              />
             </button>
             <div
               onClick={() => {
