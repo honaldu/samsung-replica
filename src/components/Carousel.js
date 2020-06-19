@@ -98,7 +98,7 @@ class Carousel extends Component {
     };
 
     return (
-      <div className="carousel-container">
+      <div className="carousel-wrapper">
         <div
           className="carousel-items"
           style={style}
